@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
     "builds": [
       {
         "src": "./index.js",
@@ -13,7 +12,4 @@
       }
     ]
   }
-=======
-    "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
-}
->>>>>>> b4fa214baebf1b92140c9c0c193915dc24dcca93
+
