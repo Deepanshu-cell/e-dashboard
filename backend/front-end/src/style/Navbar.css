@@ -1,0 +1,21 @@
+.link{
+    text-decoration: none;
+    color: grey;
+    font-size: larger;
+}
+
+
+.linkDr{
+    text-decoration: none;
+    color: grey;
+    font-size: larger;
+}
+
+.link:hover{
+    color: white;
+
+}
+
+#logotext{
+    color: white;
+}
