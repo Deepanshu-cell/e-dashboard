@@ -7,7 +7,6 @@ const cors = require("cors"); // *** cors extension of npm to avoid cors error
 const jwt = require("jsonwebtoken");
 const jwtKey = "e-commerce";
 const Cart = require("./db/Cart");
-const path = require("path");
 
 app.use(express.json()); // middleware to parse json request body
 app.use(cors()); // ***In order to avoid cors
@@ -139,10 +138,12 @@ app.put("/cart-products/:Id", async (req, res) => {
   res.send(result);
 });
 
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV == "production") {
+  const path = require("path");
+
   app.get("/", (req, res) => {
-    app.use(express.static("front-end/build"));
-    res.sendFile("front-end/build/index.html");
+    app.use(express.static(path.resolve(__dirname, "front-end", "build")));
+    res.sendFile(path.resolve(__dirname, "front-end", "build", "index.html"));
   });
 }
 
